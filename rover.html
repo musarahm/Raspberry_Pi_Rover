@@ -1,0 +1,57 @@
+<html>
+    <head>
+    
+        <meta charset="utf-8">
+	    <title>Rover Platform</title>
+	    <meta name="description" content="Cisco Rover">
+	    <meta name="author" content="Musarrat Rahman">
+
+	    <!-- Mobile Specific Meta -->
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	    <!-- Latest compiled and minified CSS -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  	    <script type="text/javascript" src="app.js"></script>
+  	    
+    </head>
+    <body>
+        <div style="text-align:center">
+            <h1>Rover Control Panel</h1>
+            <iframe src="http://192.168.0.102:9000/javascript_simple.html" frameborder="0" align="middle" width="640" height="480" align="middle" scrolling="no"></iframe>
+            <br>
+            <img src="images/forward.png" id="t" onmousedown="forward()" onmouseup="stop(event)">
+            <br>
+            <img src="images/left.png" id="l" onmousedown="left()" onmouseup="stop(event)">
+            <img vspace="10" hspace="20" src="images/stop.png" id="s" onmousedown="stop(event)" onmouseup="stop(event)">
+            <img src="images/right.png" id="r" onmousedown="right()" onmouseup="stop(event)">
+            <br>
+            <img src="images/reverse.png" id="re" onmousedown="reverse()" onmouseup="stop()">
+            <br><br><br>
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/128806/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=spline"></iframe>
+            <br><br><br>
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/129210/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=spline"></iframe>
+            <br><br><br>
+        </div>
+        <br><br>
+        <div style="text-align: center";>
+            <span style="display:inline-block;padding:5px;border:1px solid #000099; font-size: 140%;font-weight: bold;">
+                Pan Position:
+                <button type="button" class="btn btn-primary" onclick="leftpan()">Left</button>
+                <button type="button" class="btn btn-primary" onclick="centerpan()">Center</button>
+                <button type="button" class="btn btn-primary" onclick="rightpan()">Right</button>
+            </span>
+        </div>
+        <br>
+    </body>
+</html>
+
+
+
+
+
+
+
+

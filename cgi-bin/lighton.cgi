@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#turns on the 4 white LEDS
+/usr/sbin/i2cset -y 1 0x70 0x00 0x5a
+#turns the gain to 100%
+/usr/sbin/i2cset -y 1 0x70 0x09 0x0f
+#increase the brightness for each LED to 100%
+/usr/sbin/i2cset -y 1 0x70 0x02 0x32
+/usr/sbin/i2cset -y 1 0x70 0x04 0x32
+/usr/sbin/i2cset -y 1 0x70 0x05 0x32
+/usr/sbin/i2cset -y 1 0x70 0x07 0x32
+
+
+
+
